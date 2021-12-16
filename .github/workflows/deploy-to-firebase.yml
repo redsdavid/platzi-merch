@@ -12,7 +12,7 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-          env:
+        env:
             PAYPAL_PAYMENT_CLIENT_ID: ${{ secrets.PAYPAL_PAYMENT_CLIENT_ID }}
             GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
             POSITION_STACK_KEY: ${{ secrets.POSITION_STACK_KEY }}
