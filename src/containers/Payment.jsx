@@ -8,7 +8,7 @@ const Payment = ({ history }) => {
   const { cart, buyer } = state;
 
   const paypalOtions = {
-    clientId: process.env.PAYPAL_PAYMENT_CLIENT_ID.toString(),
+    clientId: 'ATN4MgsCVKSXinkSTL1YqlANTikW5fXyo5C7TkyVUG7JB0DTr1G2aabkWFF9Uz6kKo61tL48cfWpomc4',
     intent: 'capture',
     currency: 'USD'
   }
@@ -41,7 +41,7 @@ const Payment = ({ history }) => {
       <div className="Payment-content">
         <h3>Resument del pedido:</h3>
         {cart.map((item) => (
-          <div className="Payment-item" key={item.id}>
+          <div className="Payment-item" key={item.title}>
             <div className="Payment-element">
               <h4>{item.title}</h4>
               <span>

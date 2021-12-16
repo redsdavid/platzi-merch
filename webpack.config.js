@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -10,7 +9,6 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
-  devtool: "source-map",
   resolve: {
     extensions: ['.js', '.jsx'],
   },
@@ -43,12 +41,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new Dotenv({
-			path: './.env',
-			safe: true,
-			systemvars: true,
-			defaults: false,
-		}),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',
