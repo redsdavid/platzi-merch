@@ -6,7 +6,7 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
   entry: './src/index.js',
   performance: {
-    hints: true,
+    hints: false,
     maxEntrypointSize: 512000,
     maxAssetSize: 512000
   },
