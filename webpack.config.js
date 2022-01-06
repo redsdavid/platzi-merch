@@ -5,6 +5,11 @@ const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.js',
+  performance: {
+    hints: true,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
