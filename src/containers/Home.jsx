@@ -1,12 +1,17 @@
 import React from 'react';
+import { Helmet } from 'react-helmet'
 import initialState from '../initialState';
 import Products from '../components/Products';
 
 const Home = () => {
     return (
-        <div>
-            <Products products={initialState.products}/>
-        </div>
+      <>
+        <Helmet>
+          <title>Platzi Conf Merch - Merch</title>
+        </Helmet>
+        <Products products={initialState.products} />
+      </>
+      
     )
 }
 
